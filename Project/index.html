@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Collectibles</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  background-color: #e9dcc6;  
+  color: #3b2f2f;              
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 45px;
+  border-bottom: 1px solid #d1c1a1;
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  width: 100%;
+  box-shadow: 1px 1px #3b2f2f;
+}
+.logo {
+  font-size: 24px;
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #3b2f2f;
+}
+.nav-links a:hover {
+  color: #a67b5b;
+}
+.hero{
+    height: 100vh;
+    background-color: #f5f0e1;  
+    display: flex;                     
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;    
+    background-image: url(./hero-img1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+.hero-content {
+  max-width: 700px;
+}
+.hero h2 {
+  font-size: 28px;
+  color: #3b2f2f;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  color: #5b4636;
+  text-shadow: 1px 1px 2px #bfa98a;
+}
+section.about{
+    background-color: #e9dcc6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 120px;
+    gap: 60px;
+}
+div.about-image{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+div.about-image img{
+    width: 250px;
+    height: 300px;
+    border: 2px solid #5b4636;
+    border-radius: 8px
+}
+div.about-text h2 {
+  font-size: 24px;
+  color: #4b3621;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+}
+div.about-text p {
+  font-size: 18px;
+  color: #5b4636;
+  text-shadow: 1px 1px 2px #bfa98a
+}
+div.about-text span {
+  color: #5b4636;
+  font-weight: bold;
+}
+section.culture{
+    background-color: #d9c9a5;
+    padding-bottom: 100px;
+}
+div.culture-text-h{
+    color: #4b3621;
+    margin-left: 100px;
+    padding-top: 50px;
+    font-family: "Playfair Display", serif;
+}
+div.culture-images{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+div.culture-images img{
+    border: 2px solid #5b4636;
+    border-radius: 8px;
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+
+}
+div.culture-text-p{
+    color: #5b4636;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px #bfa98a;
+    margin: 30px 120px 0px 120px;
+    border: 4px solid #5b4636;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #e9dcc6;
+}
+section.gallery-container {
+  background-color: #e9dcc6; /* or #cdb891 if you want darker */
+  text-align: center;
+  padding: 80px 100px;
+}
+div.gallery{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 25px;
+}
+section.gallery-container h2{
+    color: #4b3621;
+    font-family: "Playfair Display", serif;
+}
+div.gallery img{
+    border: 2px solid #5b4636;
+    border-radius: 8px;
+    width: 300px;
+    height: 400px;
+    margin-top: 60px;
+}
+section.shop {
+  background-color: #d9c9a5;
+  text-align: center;
+  padding: 100px 60px;
+}
+section.shop h2{
+    color: #3b2f2f;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+section.shop h2 {
+  color: #4b3621;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+}
+.shop-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.shop-buttons button {
+  background-color: #e9dcc6;
+  color: #4b3621;
+  border: 2px solid #5b4636;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 15px 30px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #00000033;
+}
+.shop-buttons button:hover {
+  background-color: #5b4636;
+  color: #e9dcc6;
+}
+footer.footer {
+  background-color: #5b4636;
+  color: #e9dcc6;
+  padding: 60px 100px 20px;
+  font-family: "Playfair Display", serif;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.footer-container h3 {
+  color: #e9dcc6;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #d9c9a5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.footer-container p {
+  font-size: 16px;
+  color: #f5f0e1;
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 900px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 20px;
+    height: auto;
+    background-position: center;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* About Section */
+  section.about {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .about-image {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Culture Section */
+  .culture-images {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .culture-images img {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .culture-text-p {
+    margin: 20px;
+  }
+
+  /* Gallery Section */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 0;
+    gap: 20px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Shop Section */
+  .shop-buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .shop-buttons button {
+    width: 45%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer.footer {
+    padding: 40px 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 500px) {
+  .about-image {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .shop-buttons button {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Vintage Collectibles</h1>
+            <ul class="nav-links" type="none">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+             <h2>Preserving the Past, One Treasure at a Time</h2>
+            <p>
+                Explore our world of timeless vintage collectibles — cameras,
+                vinyls, watches and more that tell stories of a golden era.
+            </p>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="./about-img1.jpg" alt="Vintage-Camera">
+            <img src="./about-img2.jpg" alt="Vintage-Vinyl">
+            <img src="./about-img3.jpg" alt="Vintage-Telephone">
+        </div>
+        <div class="about-text">
+            <h2>About Vintage Collectibles</h2>
+            <p>
+                At <span>Vintage Collectibles</span>, we celebrate the charm of the past through timeless treasures — 
+                cameras, vinyls, watches, and antiques that capture history in their design. 
+                Each piece we curate tells a story of craftsmanship, culture, and elegance from another era. 
+                Our mission is to preserve the beauty of vintage artistry and share it with those who value 
+                nostalgia and authenticity.
+            </p>
+        </div>
+    </section>
+    <section class="culture" id="culture">
+        <div class="culture-text-h">
+            <h2>Vintage Culture</h2>
+        </div>
+        <div class="culture-images">
+            <img src="./culture-img1.jpg" alt="Vintage-clock">
+            <img src="./culture-img2.jpg" alt="Vintage-Typewriter">
+            <img src="./culture-img3.jpg" alt="Vintage-Watch">
+        </div>
+        <div class="culture-text-p">
+            <p>
+                The vintage culture is more than just old objects — it’s a reflection of art, craftsmanship, and memories that shaped generations. 
+                Every collectible carries a unique history, whether it’s a record that played the classics of the 60s or a camera that captured life’s earliest moments. 
+                Through these timeless treasures, we reconnect with the elegance, simplicity, and creativity of a bygone era.
+            </p>
+
+        </div>
+    </section>
+    <section class="gallery-container" id="gallery">
+        <h2>Our Collection</h2>
+        <div class="gallery">
+            <img src="./gallery-img1.jpg" alt="Vintage-Television" class="gallery-img">
+            <img src="./gallery-img2.jpg" alt="Vintage-Furniture" class="gallery-img">
+            <img src="./gallery-img3.jpg" alt="Vintage-Furniture" class="gallery-img">
+            <img src="./gallery-img4.jpg" alt="Vintage Gramophone" class="gallery-img">
+            <img src="./gallery-img5.jpg" alt="Vintage-Camera" class="gallery-img">
+            <img src="./gallery-img6.jpg" alt="Vintage-Typewriter" class="gallery-img">
+            <img src="./gallery-img8.jpg" alt="Vintage-clock" class="gallery-img">
+            <a href="">
+                <img src="./gallery-img8.png" alt="Vintage-Furniture" class="gallery-img">
+            </a>   
+        </div>
+    </section>
+    <section class="shop" id="shop">
+        <h2>Shop by Category</h2>
+        <div class="shop-buttons">
+            <button>Clock</button>
+            <button>Camera</button>
+            <button>Typewriter</button>
+            <button>Telephone</button>
+            <button>Record Player</button>
+            <button>Watch</button>
+            <button>Furniture</button>
+            <button>More...</button>
+        </div>
+    </section>
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-about">
+            <h3>Vintage Collectibles</h3>
+            <p>
+                Preserving the charm of the past through curated collectibles —
+                each piece tells a story of art, history, and timeless elegance.
+            </p>
+        </div>
+
+            <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@vintagecollectibles.com</p>
+            <p>Phone: +91 9876543210</p>
+            <p>Location: Hyderabad, India</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
